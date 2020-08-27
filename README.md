@@ -39,15 +39,15 @@ The table below contains the links to all the data files for each dataset:
 
 ### Table descriptions
 
-The following sections report a description for each type of data reported in
-the table before.
+The following sections describe the content of each file linked in the table
+above.
 
 #### Genomic data
 
 The genomic data table contain the corrected copy number values and the allele
-specific values for each gene for each sample analyzed in the study.
+specific copy number for each gene for each sample analyzed in the study.
 
-In the table below each field of the table is described:
+In the table below each field of the results is described:
 
 | Field                        | Description                                                           |
 | --------                     | --------                                                              |
@@ -69,19 +69,22 @@ In the table below each field of the table is described:
 
 #### FAME data
 
-Each FAME data table contain the results of the independence analyses (FAME)
-run on each pair of cancer genes vs druggable (as described in the methods of
-the paper). The analyses were run on three different sets of aberrations:
+Each FAME output table contains the results of the independence analyses (FAME)
+run on each pair of cancer genes vs druggable (as described in the methods
+section of the paper). The analyses were run on three different sets of
+aberrations:
 
-- Hemizygous deletions (Hemi-Del): one allele is lost and the other retains only one copy
-- Copy neutral Loss of heterozygosity (CN-LOH): one allele is lost while the other has a
-  duplication (in non-allele specific analyses this appears as wild type)
+- Hemizygous deletions (Hemi-Del): one allele is lost and the other retains one
+  copy
+- Copy neutral Loss of heterozygosity (CN-LOH): one allele is lost while the
+  other has a duplication (in non-allele specific analyses this would appear as
+  wild type)
 - Either Hemi-Del or CN-LOH: the sample is in either of these states.
 
 Each FAME results table contains all the pairs of genes (with at least one
-aberration) filtered to have odds-ratio < 1.
+aberration each) filtered to have odds-ratio < 1.
 
-In the table below each field of the table is described:
+In the table below each field of the results is described:
 
 | Field      | Description                                                                               |
 | --------   | --------                                                                                  |
