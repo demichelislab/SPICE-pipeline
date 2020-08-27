@@ -1,0 +1,13 @@
+cache/*
+cfg/*
+code/*
+data/*
+dbs/*
+!dbs/.keep
+libs/*
+logs/*
+material/*
+tmp/*
+tools/*
+old/*
+.pipeline/*
