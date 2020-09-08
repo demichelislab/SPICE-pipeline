@@ -135,6 +135,8 @@ the following command:
 install.packages('librarian')
 ```
 
-The script will automatically install the packages that are required to run it.
+In order to run the analysis just run the script `bash fame_analysis.R`. When
+launched the script will automatically install the packages that are needed and
+then the analysis will start.
 
 
