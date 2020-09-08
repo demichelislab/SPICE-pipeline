@@ -58,13 +58,13 @@ cat <<'EOF'
 
   prepare_keys   <- function (x) apply(x, 1, function (dd) paste(dd, collapse = ':'))
   extract_counts <- function (x, cn) mapply(function (ii, cc) getElement(x[ii, ], cc),
-                                              1:nrow(x), getElement(x, cn))
+                                                  seq_len(nrow(x)), getElement(x, cn))
   read_pacbam_add_cols <- function (fn) {
     dd <- read.table(fn, sep = '\t', quote = '', header = TRUE, comment.char = '',
                      stringsAsFactors = FALSE, colClasses = 'character')
     cbind(dd,
-          rc_ref = extract_counts(dd, 'ref'),
-          rc_alt = extract_counts(dd, 'alt'),
+          rc_ref = as.integer(extract_counts(dd, 'ref')),
+          rc_alt = as.integer(extract_counts(dd, 'alt')),
           key    = prepare_keys(dd[, pacbam_cmp_fields]),
           stringsAsFactors = FALSE)
   }

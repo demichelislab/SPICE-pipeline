@@ -58,10 +58,22 @@ then
   then
     dbsnp_restricted_kit_target_vcf="${dbsnp_base_path}/restricted_kit/${kit_name}/dbsnp_restricted_kit-${kit_name}-target-${dbsnp_version}-${reference_genome_name}.vcf"
     dbsnp_restricted_kit_bait_vcf="${dbsnp_base_path}/restricted_kit/${kit_name}/dbsnp_restricted_kit-${kit_name}-bait-${dbsnp_version}-${reference_genome_name}.vcf"
+    dbsnp_restricted_kit_target_only_snps_vcf="${dbsnp_base_path}/restricted_kit/${kit_name}/dbsnp_restricted_kit_onlysnp-${kit_name}-target-${dbsnp_version}-${reference_genome_name}.vcf"
+    dbsnp_restricted_kit_bait_only_snps_vcf="${dbsnp_base_path}/restricted_kit/${kit_name}/dbsnp_restricted_kit_onlysnp-${kit_name}-bait-${dbsnp_version}-${reference_genome_name}.vcf"
+    dbsnp_restricted_kit_target_only_snps_onealt_vcf="${dbsnp_base_path}/restricted_kit/${kit_name}/dbsnp_restricted_kit_onlysnp_onealt-${kit_name}-target-${dbsnp_version}-${reference_genome_name}.vcf"
+    dbsnp_restricted_kit_bait_only_snps_onealt_vcf="${dbsnp_base_path}/restricted_kit/${kit_name}/dbsnp_restricted_kit_onlysnp_onealt-${kit_name}-bait-${dbsnp_version}-${reference_genome_name}.vcf"
     check_file_exists_or_exit "${dbsnp_restricted_kit_target_vcf}" \
                               "Dbsnp version ${dbsnp_version} for reference genome ${reference_genome_name} restricted to kit ${kit_name} target regions does not exists.\nCannot find file ${dbsnp_restricted_kit_target_vcf}"
     check_file_exists_or_exit "${dbsnp_restricted_kit_bait_vcf}" \
                               "Dbsnp version ${dbsnp_version} for reference genome ${reference_genome_name} restricte to kit ${kit_name} bait regions does not exists.\nCannot find file ${dbsnp_restricted_kit_bait_vcf}"
+    check_file_exists_or_exit "${dbsnp_restricted_kit_target_only_snps_vcf}" \
+                              "Dbsnp version ${dbsnp_version} for reference genome ${reference_genome_name} restricted to kit ${kit_name} target regions does not exists.\nCannot find file ${dbsnp_restricted_kit_target_only_snps_vcf}"
+    check_file_exists_or_exit "${dbsnp_restricted_kit_bait_only_snps_vcf}" \
+                              "Dbsnp version ${dbsnp_version} for reference genome ${reference_genome_name} restricte to kit ${kit_name} bait regions does not exists.\nCannot find file ${dbsnp_restricted_kit_bait_only_snps_vcf}"
+    check_file_exists_or_exit "${dbsnp_restricted_kit_target_only_snps_onealt_vcf}" \
+                              "Dbsnp version ${dbsnp_version} for reference genome ${reference_genome_name} restricted to kit ${kit_name} target regions does not exists.\nCannot find file ${dbsnp_restricted_kit_target_only_snps_onealt_vcf}"
+    check_file_exists_or_exit "${dbsnp_restricted_kit_bait_only_snps_onealt_vcf}" \
+                              "Dbsnp version ${dbsnp_version} for reference genome ${reference_genome_name} restricte to kit ${kit_name} bait regions does not exists.\nCannot find file ${dbsnp_restricted_kit_bait_only_snps_onealt_vcf}"
   fi
 fi 
 

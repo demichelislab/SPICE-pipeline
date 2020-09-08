@@ -23,10 +23,11 @@ min_read_quality=20
 min_base_quality=20
 region_perc=0.5
 threads=1
+create_output_if_empty=0
 
 required_args=5
 declare -A longoptspec
-longoptspec=( [bed]=1 [vcf]=1 [kit_name]=1 [dbsnp_version]=1 [threads]=1 [min_read_quality]=1 [min_base_quality]=1 [region_perc]=1 )
+longoptspec=( [bed]=1 [vcf]=1 [kit_name]=1 [dbsnp_version]=1 [threads]=1 [min_read_quality]=1 [min_base_quality]=1 [region_perc]=1 [create_output_if_empty]=0 )
 optspec="b:v:k:d:t:"
 set_args () {
   local handled=0
@@ -55,6 +56,12 @@ set_args () {
     region_perc)
         region_perc="${2}"
         ;;
+    region_perc)
+        region_perc="${2}"
+        ;;
+    create_output_if_empty)
+        create_output_if_empty=1
+        ;;
     *)
       handled=1
         ;;
@@ -78,7 +85,32 @@ log_prefix="${log_path}/$analysis_id"
 
 bam_file="${4}"
 bed_file="${bed_file-${kit_target_bed}}"
-vcf_file="${vcf_file-${dbsnp_restricted_kit_target_vcf}}"
+vcf_file="${vcf_file-${dbsnp_restricted_kit_target_only_snps_onealt_vcf}}"
+
+
+if (( create_output_if_empty ))
+then
+
+  len_bed=$(grep -v '^#' "${bed_file}" | wc -l)
+  len_vcf=$(grep -v '^#' "${vcf_file}" | wc -l)
+
+  if [[ $len_bed -eq 0 && $len_bed -eq 0 ]]
+  then
+
+    mkdir -p "${output_prefix}"
+    echo -e "chr\tpos\trsid\tref\talt\tA\tC\tG\tT\taf\tcov" > "${output_prefix}/${analysis_id}.snps"
+    exit 0
+
+  elif [[ ! ( $len_bed -gt 0 && $len_bed -gt 0 ) ]]
+  then
+
+    echo "Option --create_output_if_empty specified but only one of vcf and bed is empty."
+    exit $exit_status
+
+  fi
+
+
+fi
 
 pacbam                                    \
   bam="${bam_file}"                       \
