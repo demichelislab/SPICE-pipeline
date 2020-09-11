@@ -49,7 +49,7 @@ cat <<'EOF'
   vep_content    <- vep_lines[!vep_is_header]
   vep_colnames   <- scan(text = sub('^#', '', tail(vep_header, 1)), what = 'chr',
                          quiet = TRUE)
-  n_fields       <- length(gregexpr('\t', vep_content[[1]], fixed = TRUE)[[1]]) + 1
+  n_fields       <- length(vep_colnames)
   vep <- local({
     dd <- scan(text = vep_content, what = setNames(as.list(rep('char', n_fields)),
                vep_colnames), quiet = TRUE)

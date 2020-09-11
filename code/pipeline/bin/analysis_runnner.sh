@@ -480,6 +480,7 @@ run_step 'snv_read_counts'                            \
   par_tsv -j$threads_few                              \
   ionice -c3                                          \
   run_pacbam_single.sh                                \
+  --create_output_if_empty                            \
   --threads "${threads_per_sample_many}"              \
   --bed "$data_dir/snv_bed/{pair_id}.bed"             \
   --vcf "$data_dir/mutect2_filter_snvs/{pair_id}.vcf" \
