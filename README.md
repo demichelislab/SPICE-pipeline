@@ -121,7 +121,7 @@ in the paper.
 In order to run the pipeline some resources files and tools are needed. A
 complete example folder that includes both the code and the resources can be
 downloaded from [here](https://www.dropbox.com/s/ur4wq6zp0xtwbus/pipeline_example.tar.gz?dl=0).
-Given the content the file is big (12GB). The complete instructions needed to
+Be aware that the file is big (12GB). The complete instructions needed to
 run the pipeline are inside the archive.
 
 ### FaME
