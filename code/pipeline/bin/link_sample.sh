@@ -20,7 +20,7 @@ have_errors=0
 
 for ext in .bam .bam.bai .bai
 do
-  cur_sample="${sample_name}${ext}"
+  cur_sample=$(abs_path.py "${sample_name}${ext}")
   if [[ -e "$cur_sample" ]]
   then
     ln -sf "$cur_sample" "$destination_name$ext"
