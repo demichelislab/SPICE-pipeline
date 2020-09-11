@@ -113,6 +113,17 @@ The code folder contains the code for the pipeline and FAME
 
 ### Pipeline
 
+The pipeline folder contains the complete code of analysis pipeline described
+in the paper.
+
+#### Running the pipeline
+
+In order to run the pipeline some resources files and tools are needed. A
+complete example folder that includes both the code and the resources can be
+downloaded from [here](https://www.dropbox.com/s/ur4wq6zp0xtwbus/pipeline_example.tar.gz?dl=0).
+Given the content the file is big (12GB). The complete instructions needed to
+run the pipeline are inside the archive.
+
 ### FaME
 
 FAME is a tool that can test the aberrations of the samples in one or more
