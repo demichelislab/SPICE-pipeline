@@ -1,3 +1,5 @@
+![An Image](/images/SPICE_COLORI.png)
+
 # SPICE-pipeline
 Framework for allele specific analysis of matched tumor and normal next generation sequencing data
 
