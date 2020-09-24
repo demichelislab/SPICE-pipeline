@@ -67,6 +67,9 @@ In the table below each field of the results is described:
 | count_deletions              | The total number of deletions present in the gene                     |
 | segment_id                   | The ID of the segment containing the gene                             |
 
+For a detailed description of log2_corr, log2_corr_int, as_cn_disc and allele specific analysis
+please see: https://doi.org/10.1002/cpbi.81
+
 #### FAME data
 
 Each FAME output table contains the results of the independence analyses (FAME)
