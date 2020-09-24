@@ -1,11 +1,11 @@
 # SPICE-pipeline
-Framework for allele specific analysis of matched tumor and normal samples.
+Framework for allele specific analysis of matched tumor and normal next generation sequencing data
 
 ## Pre-computed data
 
 All precomputed TCGA allele-specific data and FAME tables are available [here](https://www.dropbox.com/sh/jzk9roi8c238cc0/AABTTlO7YTneLrjyVUIV8vJia?dl=0)
 
-The table below contains the links to all the data files for each dataset:
+The table below contains the links to all the output files for each dataset:
 
 | Dataset  | Genomic data                                                                                 | FAME: Hemi-Del vs Hemi-Del                                                                                      | FAME: CN-LOH vs CN-LOH                                                                                  | FAME: (Hemi-Del or CN-LOH) vs (Hemi-Del or CN-LOH)                                                                                       |
 | -------- | --------                                                                                     | --------                                                                                                        | --------                                                                                                | --------                                                                                                                                 |
@@ -134,12 +134,12 @@ section of the paper.
 
 #### Running FaME
 
-> :warning: **WARNING**: FaME can use an important quantity of resources if run
-> on big datasets.
+> :warning: FaME requires large amount of computational resources if run
+> on large datasets.
 
 In order to run FaME just copy the genomic data that can be downloaded from the
 links reported above to the data/genomic/ folder and run the code. The script
-requires the R librarian package. The librarian package can be installed with
+requires the R *librarian* package. The *librarian* package can be installed with
 the following command:
 
 ```r
