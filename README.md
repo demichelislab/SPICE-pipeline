@@ -1,4 +1,4 @@
-![An Image](/images/SPICE_COLORI.png)
+<img src="/images/SPICE_COLORI.png" width=50%/>
 
 # SPICE-pipeline
 Framework for allele specific analysis of matched tumor and normal next generation sequencing data
