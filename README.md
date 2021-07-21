@@ -182,6 +182,7 @@ The code folder contains the code for the pipeline.
 
 The pipeline folder contains the complete code of analysis pipeline described
 in the paper.
+A CWL version of the pipeline is available here: https://github.com/demichelislab/SPICE-pipeline-CWL
 
 #### Running the pipeline
 
