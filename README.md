@@ -149,39 +149,30 @@ other fields see [VEP documentation](https://m.ensembl.org/info/docs/tools/vep/s
 | snv_clonality_int  | Only valid for SNVs                                                                        |
 | study              | The study that contains the variant                                                        |
 
-#### Haploinsufficiency data
+#### LOH/CN linear model results
 
-The Haploinsufficiency data table contains informations about the
-haploinsufficiency of gene expression tested in different genomic contexts
-(i.e. hemizygous deletion and copy neutral loss of heterozygosity).
+These tables contain the results from linear models associating copy number (CN) and loss of heterozygosity (LOH) to gene expression.
 
 In the table below the field present in the table are described.
 
-| Field               | Description                                                                                                                          |
-| --------            | --------                                                                                                                             |
-| gene_id             | The symbol of the gene                                                                                                               |
-| homo_del            | The number of samples with homozygous deletions of the gene                                                                          |
-| hemi_del            | The number of samples with hemizygous deletions of the gene                                                                          |
-| cnnl                | The number of samples with copy neutral losses of heterozygosity of the gene                                                         |
-| gain_del            | The number of samples with copy gains loss of heterozygosity of the gene                                                             |
-| wt                  | The number of samples with normal copy number                                                                                        |
-| gain_unb            | The number of samples with an unbalanced gain of the gene                                                                            |
-| gain                | The number of samples with a balanced gain of the gene                                                                               |
-| amp                 | The number of samples with a balanced amplification of the gene                                                                      |
-| amp_del             | The number of samples with copy amplifications loss of heterozygosity of the gene                                                    |
-| amp_unb             | The number of samples with a unbalanced amplification of the gene                                                                    |
-| nd                  | The number of samples with a undetermied allele specific state of the gene                                                           |
-| n_tot               | The total number of considered samples                                                                                               |
-| n_snv               | The total number of SNVs in the samples                                                                                              |
-| n_double_hit        | The number of events where the SNV is present in LoH genomic context (hemi_del, cnnl, gain_del)                                      |
-| mean_fpkm           | The mean expression of the gene in FPKM                                                                                              |
-| mean_fpkm_wt        | The mean expression of the gene in FPKM in wt genomic context                                                                        |
-| mean_fpkm_hemi_del  | The mean expression of the gene in FPKM in hemi_del genomic context                                                                  |
-| mean_fpkm_cnnl      | The mean expression of the gene in FPKM in cnnl genomic context                                                                      |
-| mean_fpkm_hetloss   | The mean expression of the gene in FPKM in LoH genomic context (either hemi_del or cnnl)                                             |
-| pval_hemi_del_vs_wt | The p-value for the test of haploinsufficiency between samples with hemi_del vs samples with wt genomic context                      |
-| pval_cnnl_vs_wt     | The p-value for the test of haploinsufficiency between samples with cnnl vs samples with wt genomic context                          |
-| pval_hetloss_vs_wt  | The p-value for the test of haploinsufficiency between samples with LoH (either hemi_del or cnnl) vs samples with wt genomic context |
+| Field         | Description                                                      |
+| --------      | --------                                                         |
+| model_p       | p value of the model                                             |
+| beta_cntot    | beta value for the variable "CN"                                 |
+| stde_cntot    | standard error for the variable "CN"                             |
+| t_val_cntot   | t value for the variable "CN"                                    |
+| pval_cntot    | p value for the variable "CN"                                    |
+| beta_loh      | beta value for the variable "LOH"                                |
+| stde_loh      | standard error for the variable "LOH"                            |
+| tval_loh      | t value for the variable "LOH"                                   |
+| pval_loh      | p value for the variable "LOH"                                   |
+| gene          | gene symbol of the tested gene                                   |
+| class         | class of the gene ("TSG","OG","ESSENTIAL","OTHER")               |
+| fdr_model     | fdr of the model                                                 |
+| fdr_loh       | fdr of the variable "LOH"                                        |
+| fdr_cntot     | fdr of the variable "CN"                                         |
+| ass_coeff_CN  | coefficient of association (beta/stde) for the variable "CN"     |
+| ass_coeff_LOH | coefficient of association (beta/stde) for the variable "LOH"    |
 
 ## Code
 
