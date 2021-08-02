@@ -6,7 +6,7 @@ Framework for allele specific analysis of matched tumor and normal next generati
 ## Pre-computed data
 
 All precomputed TCGA allele-specific data, genomic variants data (SNVs and
-indels) and haploinsufficiency data are available [here](https://www.dropbox.com/sh/jzk9roi8c238cc0/AABTTlO7YTneLrjyVUIV8vJia?dl=0)
+indels) and expression association to LOH status data are available [here](https://www.dropbox.com/sh/jzk9roi8c238cc0/AABTTlO7YTneLrjyVUIV8vJia?dl=0)
 
 The table below contains the links to all the output files for each dataset:
 
