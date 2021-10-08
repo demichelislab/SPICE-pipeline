@@ -188,8 +188,8 @@ A CWL version of the pipeline is available here: https://github.com/demichelisla
 
 In order to run the pipeline some resources files and tools are needed. A
 complete example folder that includes both the code and the resources can be
-downloaded from [here](https://www.dropbox.com/s/ur4wq6zp0xtwbus/pipeline_example.tar.gz?dl=0).
-Be aware that the file is big (12GB). The complete instructions needed to
+downloaded from [here](https://www.dropbox.com/s/qeincooq0pa1bh5/pipeline_example.tar.gz?dl=0).
+Be aware that the file is big (12.5GB). The complete instructions needed to
 run the pipeline are inside the archive.
 
 ## Fundings
